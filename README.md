@@ -76,6 +76,7 @@ python3 vol.py -f /mnt/c/tools/volatility_2.6_win64_standalone/memdump.vmem wind
 
 This looks at how the executable is established. Here it saying what caused it to freak out. There’s a page in memory that’s execute, read, and write at the same time (ERW file). It’s not read or write or execute. It’s all of them at the same time, which is something that we see malware do.
 <br>
+<br>
 The presence of an ERW memory page is a red flag because it goes against standard security practices that separate code execution from data modification. This combination is often exploited by malware to inject, modify, and execute code dynamically, making it a strong indicator of malicious activity.
 <br>
 <br>
